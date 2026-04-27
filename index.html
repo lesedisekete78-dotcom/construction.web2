@@ -1,0 +1,3716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coglan Construction and Projects | Premium Construction Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-card: #1a1a1a;
+  --bg-card-hover: #222222;
+  --accent: #c8a45a;
+  --accent-light: #d4b76a;
+  --accent-dark: #a88840;
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --text-muted: #a0a0a0;
+  --border: #333333;
+  --success: #22c55e;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --ai-blue: #3b82f6;
+  --ai-blue-light: #60a5fa;
+  --ai-blue-dark: #2563eb;
+  --ai-blue-glow: 0 0 30px rgba(59, 130, 246, 0.6);
+  --accent-glow: 0 0 20px rgba(200, 164, 90, 0.5);
+  --btn-glow: 0 0 15px rgba(200, 164, 90, 0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--accent-dark); border-radius: 4px; }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 8px var(--accent));
+}
+
+/* Updated Logo Icon Styles for CC */
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+  filter: drop-shadow(0 0 5px var(--accent));
+  animation: logo-pulse 3s infinite;
+}
+
+@keyframes logo-pulse {
+  0%, 100% { filter: drop-shadow(0 0 5px var(--accent)); }
+  50% { filter: drop-shadow(0 0 15px var(--accent-light)); }
+}
+
+/* CC SVG Styles */
+.cc-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.cc-letter {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: cc-draw 2s ease-out forwards;
+  filter: drop-shadow(0 0 3px var(--accent));
+}
+
+.cc-letter-second {
+  animation-delay: 0.5s;
+}
+
+@keyframes cc-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+
+.logo-text span {
+  color: var(--accent);
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(200, 164, 90, 0.3);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--accent);
+  text-shadow: 0 0 8px rgba(200, 164, 90, 0.5);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 5px var(--accent);
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-cta {
+  background: var(--accent);
+  color: var(--bg-primary);
+  padding: 0.6rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: var(--btn-glow);
+}
+
+.nav-cta:hover {
+  background: var(--accent-light);
+  transform: translateY(-1px);
+  box-shadow: 0 0 25px rgba(200, 164, 90, 0.6);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg video, .hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  filter: brightness(1.2);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.6) 50%, rgba(10,10,10,0.85) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-text h1 span {
+  color: var(--accent);
+  text-shadow: 0 0 20px rgba(200, 164, 90, 0.4);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+  font-weight: 400;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg-primary);
+  box-shadow: var(--btn-glow);
+}
+
+.btn-primary:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(200, 164, 90, 0.6);
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.1);
+  color: var(--text-primary);
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(5px);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 0 15px rgba(200, 164, 90, 0.3);
+  transform: translateY(-2px);
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.stat-card {
+  background: rgba(26, 26, 26, 0.8);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+}
+
+.stat-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4), 0 0 20px rgba(200, 164, 90, 0.2);
+}
+
+.stat-number {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(200, 164, 90, 0.3);
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.section {
+  padding: 6rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-label {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 30px rgba(200, 164, 90, 0.15);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(200, 164, 90, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(200, 164, 90, 0.1);
+}
+
+.service-card:hover .service-icon {
+  background: var(--accent);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 20px var(--accent);
+}
+
+.service-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 2;
+  transition: stroke 0.3s ease;
+}
+
+.service-card:hover .service-icon svg {
+  stroke: var(--bg-primary);
+}
+
+.service-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.about-section {
+  background: var(--bg-secondary);
+  padding: 6rem 2rem;
+}
+
+.about-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-image {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.about-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.05);
+}
+
+.about-badge {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--accent);
+  color: var(--bg-primary);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 0 15px rgba(200, 164, 90, 0.4);
+}
+
+.about-badge strong {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  display: block;
+}
+
+.about-badge span {
+  font-size: 0.8rem;
+}
+
+.about-text h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.about-text h2 span {
+  color: var(--accent);
+  text-shadow: 0 0 15px rgba(200, 164, 90, 0.3);
+}
+
+.about-text p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.about-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.about-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.about-feature .check {
+  width: 24px;
+  height: 24px;
+  background: rgba(200, 164, 90, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 5px rgba(200, 164, 90, 0.2);
+}
+
+.about-feature .check svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 3;
+}
+
+.about-feature span {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* New In Action Section Styles */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.action-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 400px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transition: all 0.4s ease;
+  border: 1px solid var(--border);
+}
+
+.action-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 25px rgba(200, 164, 90, 0.2);
+  border-color: var(--accent);
+}
+
+.action-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: brightness(0.8);
+}
+
+.action-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(1);
+}
+
+.action-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.4) 50%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.action-overlay h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.action-overlay p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.gallery-section {
+  padding: 6rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 250px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3), 0 0 15px rgba(200, 164, 90, 0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,10,10,0.95) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.gallery-overlay p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.team-section {
+  padding: 6rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.team-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.team-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3), 0 0 20px rgba(200, 164, 90, 0.1);
+}
+
+.team-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-image {
+  transform: scale(1.05);
+}
+
+.team-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.team-info h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.team-info p {
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.team-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.team-social a {
+  width: 36px;
+  height: 36px;
+  background: var(--bg-secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.team-social a:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.team-social svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 300px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3), 0 0 15px rgba(200, 164, 90, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,10,10,0.95) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-overlay h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.project-overlay p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.faq-section {
+  background: var(--bg-secondary);
+  padding: 6rem 2rem;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: var(--accent-dark);
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.faq-question {
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+.faq-question:hover {
+  color: var(--accent);
+}
+
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+  stroke: var(--accent);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 1.5rem;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.faq-answer p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.testimonials-section {
+  background: var(--bg-secondary);
+  padding: 6rem 2rem;
+}
+
+.testimonials-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2.5rem;
+  transition: all 0.4s ease;
+}
+
+.testimonial-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3), 0 0 20px rgba(200, 164, 90, 0.1);
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-stars svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--accent);
+  filter: drop-shadow(0 0 5px rgba(200, 164, 90, 0.5));
+}
+
+.testimonial-card p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--accent-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--bg-primary);
+  box-shadow: 0 0 10px rgba(200, 164, 90, 0.3);
+}
+
+.testimonial-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.testimonial-info span {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.booking-section {
+  padding: 6rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.booking-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.booking-info h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.booking-info h2 span {
+  color: var(--accent);
+  text-shadow: 0 0 15px rgba(200, 164, 90, 0.3);
+}
+
+.booking-info p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.booking-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.booking-step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: var(--accent);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--bg-primary);
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(200, 164, 90, 0.4);
+}
+
+.step-content h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.step-content p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.contact-section {
+  background: var(--bg-secondary);
+  padding: 6rem 2rem;
+}
+
+.contact-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  border-color: var(--accent);
+  transform: translateX(10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 0 15px rgba(200, 164, 90, 0.1);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(200, 164, 90, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(200, 164, 90, 0.1);
+}
+
+.contact-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 2;
+}
+
+.contact-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.contact-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.contact-card a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+  color: var(--accent-light);
+  text-shadow: 0 0 8px rgba(200, 164, 90, 0.5);
+}
+
+.map-container {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  height: 400px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.footer {
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.footer-logo span {
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(200, 164, 90, 0.3);
+}
+
+.footer p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.phone-dialer {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.phone-btn {
+  width: 56px;
+  height: 56px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--btn-glow);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  animation: phone-pulse 2s infinite;
+}
+
+@keyframes phone-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(200, 164, 90, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(200, 164, 90, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(200, 164, 90, 0); }
+}
+
+.phone-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(200, 164, 90, 0.6);
+}
+
+.phone-btn svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--bg-primary);
+  fill: none;
+  stroke-width: 2;
+}
+
+.phone-tooltip {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.phone-btn:hover + .phone-tooltip,
+.phone-tooltip:hover {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================
+   AI AGENT ROBOT LOGO & ICON STYLES (BLUE)
+   ============================================ */
+.voice-widget {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 999;
+}
+
+.voice-trigger {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--ai-blue) 0%, var(--ai-blue-light) 50%, var(--ai-blue) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: var(--ai-blue-glow);
+}
+
+.voice-trigger::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--ai-blue) 0%, var(--ai-blue-light) 50%, var(--ai-blue) 100%);
+  opacity: 0.3;
+  animation: ai-pulse-ring 2s ease-in-out infinite;
+}
+
+.voice-trigger::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--ai-blue) 0%, var(--ai-blue-light) 50%, var(--ai-blue) 100%);
+  opacity: 0.15;
+  animation: ai-pulse-ring 2s ease-in-out infinite 0.5s;
+}
+
+@keyframes ai-pulse-ring {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% { 
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+.voice-trigger:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 50px rgba(59, 130, 246, 0.8);
+}
+
+.voice-trigger.active {
+  animation: ai-active-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes ai-active-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+  }
+  50% { 
+    box-shadow: 0 0 60px rgba(59, 130, 246, 0.9);
+  }
+}
+
+/* Robot Logo Icon - Blue */
+.ai-logo-icon {
+  width: 36px;
+  height: 36px;
+}
+
+.ai-logo-icon .robot-head {
+  fill: var(--bg-primary);
+  animation: robot-float 3s ease-in-out infinite;
+}
+
+@keyframes robot-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+.ai-logo-icon .robot-eye {
+  fill: var(--bg-primary);
+  animation: robot-blink 4s ease-in-out infinite;
+}
+
+@keyframes robot-blink {
+  0%, 45%, 55%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.1); }
+}
+
+.ai-logo-icon .robot-antenna {
+  stroke: var(--bg-primary);
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+}
+
+.ai-logo-icon .robot-antenna-light {
+  fill: var(--bg-primary);
+  animation: antenna-pulse 2s ease-in-out infinite;
+}
+
+@keyframes antenna-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.voice-trigger.speaking .ai-logo-icon .robot-antenna-light {
+  animation: antenna-fast-pulse 0.5s ease-in-out infinite;
+}
+
+@keyframes antenna-fast-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+.voice-trigger.listening .ai-logo-icon .robot-eye {
+  animation: robot-listening 1s ease-in-out infinite;
+}
+
+@keyframes robot-listening {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.voice-trigger.thinking .ai-logo-icon .robot-antenna-light {
+  animation: antenna-thinking 0.3s ease-in-out infinite;
+}
+
+@keyframes antenna-thinking {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.8); }
+}
+
+.voice-panel {
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  width: 380px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.95);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.voice-panel.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.voice-panel-header {
+  background: linear-gradient(135deg, var(--ai-blue) 0%, var(--ai-blue-light) 50%, var(--ai-blue) 100%);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.voice-panel-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+  animation: header-shimmer 3s infinite;
+}
+
+@keyframes header-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.voice-panel-header h3 {
+  color: var(--bg-primary);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Robot Header Logo - Blue */
+.ai-header-logo {
+  width: 28px;
+  height: 28px;
+}
+
+.ai-header-logo .robot-head {
+  fill: var(--bg-primary);
+}
+
+.ai-header-logo .robot-eye {
+  fill: var(--bg-primary);
+  animation: robot-blink 4s ease-in-out infinite;
+}
+
+.voice-close-btn {
+  background: rgba(0,0,0,0.2);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--bg-primary);
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.voice-close-btn:hover {
+  background: rgba(0,0,0,0.3);
+  transform: rotate(90deg);
+}
+
+.voice-status {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background: var(--bg-secondary);
+}
+
+/* Large Animated Robot Avatar - Blue */
+.voice-avatar-container {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem;
+  position: relative;
+}
+
+.voice-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--ai-blue) 0%, var(--ai-blue-light) 50%, var(--ai-blue) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: var(--ai-blue-glow);
+}
+
+.voice-avatar::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 3px solid var(--ai-blue);
+  opacity: 0.3;
+  animation: avatar-ring-spin 4s linear infinite;
+}
+
+@keyframes avatar-ring-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.voice-avatar::after {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 2px dashed var(--ai-blue);
+  opacity: 0.2;
+  animation: avatar-ring-spin-reverse 6s linear infinite;
+}
+
+@keyframes avatar-ring-spin-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.voice-avatar.speaking::before {
+  animation: avatar-speaking-pulse 1s ease-in-out infinite;
+  border-style: solid;
+}
+
+@keyframes avatar-speaking-pulse {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 0.3;
+    border-width: 3px;
+  }
+  50% { 
+    transform: scale(1.2);
+    opacity: 0.6;
+    border-width: 5px;
+  }
+}
+
+.voice-avatar.listening::before {
+  animation: avatar-listening-pulse 1.5s ease-in-out infinite;
+  border-color: var(--success);
+}
+
+@keyframes avatar-listening-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+  }
+  50% { 
+    box-shadow: 0 0 0 20px rgba(34, 197, 94, 0);
+  }
+}
+
+.voice-avatar.thinking::before {
+  animation: avatar-thinking-pulse 0.5s ease-in-out infinite;
+  border-color: var(--ai-blue-light);
+}
+
+@keyframes avatar-thinking-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.6);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+    transform: scale(1.1);
+  }
+}
+
+/* Robot Face SVG Animation - Blue Theme */
+.robot-face-svg {
+  width: 70px;
+  height: 70px;
+}
+
+.robot-face-svg .robot-head {
+  fill: var(--bg-primary);
+  animation: robot-head-bob 3s ease-in-out infinite;
+}
+
+@keyframes robot-head-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.robot-face-svg .robot-eye {
+  fill: var(--bg-primary);
+}
+
+.robot-face-svg .robot-eye.left {
+  animation: robot-left-blink 4s ease-in-out infinite;
+}
+
+.robot-face-svg .robot-eye.right {
+  animation: robot-right-blink 4s ease-in-out infinite 0.1s;
+}
+
+@keyframes robot-left-blink {
+  0%, 45%, 55%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.2); }
+}
+
+@keyframes robot-right-blink {
+  0%, 45%, 55%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.2); }
+}
+
+.robot-face-svg .robot-mouth {
+  fill: none;
+  stroke: var(--bg-primary);
+  stroke-width: 3;
+  stroke-linecap: round;
+  animation: robot-mouth-talk 0.5s ease-in-out infinite;
+  animation-play-state: paused;
+}
+
+.voice-avatar.speaking .robot-face-svg .robot-mouth {
+  animation-play-state: running;
+}
+
+@keyframes robot-mouth-talk {
+  0%, 100% { d: path("M 25 45 Q 35 50 45 45"); }
+  50% { d: path("M 25 45 Q 35 55 45 45"); }
+}
+
+.robot-face-svg .robot-antenna {
+  stroke: var(--bg-primary);
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+}
+
+.robot-face-svg .robot-antenna-light {
+  fill: var(--bg-primary);
+  animation: robot-antenna-glow 2s ease-in-out infinite;
+}
+
+@keyframes robot-antenna-glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.voice-status-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  min-height: 24px;
+  font-weight: 500;
+}
+
+.voice-status-text.typing {
+  animation: text-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes text-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Animated Sound Waves - Blue */
+.voice-waves {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.voice-wave-bar {
+  width: 5px;
+  height: 10px;
+  background: linear-gradient(135deg, var(--ai-blue) 0%, var(--ai-blue-light) 100%);
+  border-radius: 3px;
+  transition: height 0.1s ease;
+}
+
+.voice-waves.active .voice-wave-bar {
+  animation: wave-anim 0.8s ease-in-out infinite;
+}
+
+.voice-wave-bar:nth-child(1) { animation-delay: 0s; }
+.voice-wave-bar:nth-child(2) { animation-delay: 0.1s; }
+.voice-wave-bar:nth-child(3) { animation-delay: 0.2s; }
+.voice-wave-bar:nth-child(4) { animation-delay: 0.3s; }
+.voice-wave-bar:nth-child(5) { animation-delay: 0.4s; }
+.voice-wave-bar:nth-child(6) { animation-delay: 0.3s; }
+.voice-wave-bar:nth-child(7) { animation-delay: 0.2s; }
+.voice-wave-bar:nth-child(8) { animation-delay: 0.1s; }
+.voice-wave-bar:nth-child(9) { animation-delay: 0s; }
+
+@keyframes wave-anim {
+  0%, 100% { 
+    height: 10px;
+    opacity: 0.5;
+  }
+  50% { 
+    height: 40px;
+    opacity: 1;
+  }
+}
+
+.voice-waves.listening .voice-wave-bar {
+  background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
+  animation: wave-listening 1s ease-in-out infinite;
+}
+
+@keyframes wave-listening {
+  0%, 100% { height: 15px; }
+  50% { height: 35px; }
+}
+
+.voice-waves.thinking .voice-wave-bar {
+  background: linear-gradient(135deg, var(--ai-blue) 0%, var(--ai-blue-light) 100%);
+  animation: wave-thinking 0.5s ease-in-out infinite;
+}
+
+@keyframes wave-thinking {
+  0%, 100% { height: 20px; opacity: 0.7; }
+  50% { height: 30px; opacity: 1; }
+}
+
+.voice-transcript {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  min-height: 100px;
+  max-height: 180px;
+  overflow-y: auto;
+  background: var(--bg-secondary);
+}
+
+.voice-transcript-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.voice-transcript-label::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--ai-blue);
+  border-radius: 50%;
+  animation: dot-pulse 2s ease-in-out infinite;
+}
+
+@keyframes dot-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.voice-transcript-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.voice-actions {
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  background: var(--bg-card);
+}
+
+.voice-action-btn {
+  flex: 1;
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.voice-action-btn:hover {
+  border-color: var(--ai-blue);
+  color: var(--ai-blue);
+  background: rgba(59, 130, 246, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.voice-action-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
+.booking-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.booking-modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.booking-modal-content {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2.5rem;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.booking-modal.open .booking-modal-content {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--bg-secondary);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.booking-modal h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.confirmation-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.confirmation-modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.confirmation-content {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2.5rem;
+  max-width: 450px;
+  width: 90%;
+  text-align: center;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.confirmation-modal.open .confirmation-content {
+  transform: scale(1);
+}
+
+.confirmation-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(34, 197, 94, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  animation: success-bounce 0.6s ease-out;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+}
+
+@keyframes success-bounce {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.confirmation-icon svg {
+  width: 40px;
+  height: 40px;
+  stroke: var(--success);
+  fill: none;
+  stroke-width: 3;
+  animation: check-draw 0.8s ease-out 0.3s both;
+}
+
+@keyframes check-draw {
+  from { stroke-dasharray: 100; stroke-dashoffset: 100; }
+  to { stroke-dasharray: 100; stroke-dashoffset: 0; }
+}
+
+.confirmation-content h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.confirmation-content p {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.confirmation-details {
+  text-align: left;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.confirmation-details .detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.confirmation-details .detail-row:last-child {
+  border-bottom: none;
+}
+
+.confirmation-details .detail-label {
+  color: var(--text-muted);
+}
+
+.confirmation-details .detail-value {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.confirmation-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--btn-glow);
+}
+
+.confirmation-btn:hover {
+  background: var(--accent-light);
+  box-shadow: 0 0 20px rgba(200, 164, 90, 0.5);
+}
+
+.toast-container {
+  position: fixed;
+  top: 100px;
+  right: 2rem;
+  z-index: 3000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.toast {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 300px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  animation: toast-in 0.4s ease, toast-out 0.4s ease 4.6s forwards;
+}
+
+.toast-success { border-left: 3px solid var(--success); }
+.toast-error { border-left: 3px solid var(--error); }
+
+.toast-message {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+@keyframes toast-in {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes toast-out {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(100%); opacity: 0; }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10,10,10,0.98);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover { color: var(--accent); }
+
+.mobile-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(200, 164, 90, 0.2);
+}
+
+.form-group input.filled {
+  border-color: var(--accent);
+  background: rgba(200, 164, 90, 0.05);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  box-shadow: var(--btn-glow);
+}
+
+.submit-btn:hover {
+  background: var(--accent-light);
+  transform: translateY(-1px);
+  box-shadow: 0 0 20px rgba(200, 164, 90, 0.5);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-text p { margin: 0 auto 2.5rem; }
+  .hero-buttons { justify-content: center; }
+  .hero-stats { max-width: 500px; margin: 0 auto; }
+  .about-container { grid-template-columns: 1fr; }
+  .booking-container { grid-template-columns: 1fr; }
+  .contact-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .mobile-menu { display: flex; }
+  .hero-text h1 { font-size: 2.5rem; }
+  .section-title { font-size: 2rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .voice-panel { width: calc(100vw - 4rem); left: auto; right: 0; }
+  .phone-dialer { bottom: 1.5rem; right: 1.5rem; }
+  .voice-widget { bottom: 1.5rem; left: 1.5rem; }
+  .hero-stats { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .about-features { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+  .action-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 { font-size: 2rem; }
+  .stat-number { font-size: 1.8rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <!-- Animated CC Letters SVG -->
+        <svg class="cc-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <!-- First C -->
+          <path class="cc-letter" d="M12 10 A10 10 0 1 0 12 30" />
+          <!-- Second C -->
+          <path class="cc-letter cc-letter-second" d="M28 10 A10 10 0 1 0 28 30" />
+        </svg>
+      </div>
+      <div class="logo-text">Coglan<span>Construction</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#in-action">In Action</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" id="navBookBtn">Book Now</button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">&times;</button>
+  <a href="#home" class="mobile-link">Home</a>
+  <a href="#services" class="mobile-link">Services</a>
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#in-action" class="mobile-link">In Action</a>
+  <a href="#gallery" class="mobile-link">Gallery</a>
+  <a href="#projects" class="mobile-link">Projects</a>
+  <a href="#faq" class="mobile-link">FAQ</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+</div>
+
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80">
+      <source src="https://videos.pexels.com/video-files/5821170/5821170-uhd_2560_1440_25fps.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Building Tomorrow's <span>Landmarks</span> Today</h1>
+      <p>Coglan Construction and Projects - Professional, reliable construction services in Johannesburg. We always leave your property clean as we found it.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary" id="heroBookBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Book a Consultation
+        </button>
+        <a href="#services" class="btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          Our Services
+        </a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card fade-in">
+        <div class="stat-number">5.0</div>
+        <div class="stat-label">Google Rating</div>
+      </div>
+      <div class="stat-card fade-in">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+      <div class="stat-card fade-in">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Support Available</div>
+      </div>
+      <div class="stat-card fade-in">
+        <div class="stat-number">Pro</div>
+        <div class="stat-label">Professional Team</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="section-header fade-in">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Our Premium Services</h2>
+    <p class="section-subtitle">From concept to completion, we deliver exceptional construction solutions tailored to your needs.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card fade-in">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+      </div>
+      <h3>Residential Construction</h3>
+      <p>Custom home building, luxury villas, and modern residential developments with premium finishes and attention to every detail.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      </div>
+      <h3>Commercial Projects</h3>
+      <p>Office buildings, retail spaces, and industrial facilities built to the highest standards of quality and efficiency.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>
+      </div>
+      <h3>Renovation & Remodeling</h3>
+      <p>Transform your existing space with our expert renovation services, from kitchen upgrades to complete home makeovers.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <h3>Maintenance & Repairs</h3>
+      <p>Comprehensive maintenance programs and emergency repair services to keep your property in perfect condition year-round.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M2 20h20M5 20V8l7-5 7 5v12M9 20v-5h6v5"/></svg>
+      </div>
+      <h3>Architectural Design</h3>
+      <p>Innovative architectural planning and 3D visualization services to bring your vision to life before construction begins.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+      </div>
+      <h3>Project Management</h3>
+      <p>End-to-end project management ensuring timely delivery, budget compliance, and quality control at every stage.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="about-container">
+    <div class="about-image fade-in">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Construction team">
+      <div class="about-badge">
+        <strong>5.0</strong>
+        <span>Google Rating</span>
+      </div>
+    </div>
+    <div class="about-text fade-in">
+      <h2>Why Choose <span>Coglan Construction</span>?</h2>
+      <p>We are a professional construction company based in Bertrams, Johannesburg, dedicated to delivering exceptional results. Our team is known for being professional and always leaving your property clean as we found it.</p>
+      <p>From initial consultation to final walkthrough, we maintain transparent communication and uphold the highest standards of craftsmanship and safety.</p>
+      <div class="about-features">
+        <div class="about-feature">
+          <div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Professional Team</span>
+        </div>
+        <div class="about-feature">
+          <div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Clean Work Sites</span>
+        </div>
+        <div class="about-feature">
+          <div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Amazing Work Quality</span>
+        </div>
+        <div class="about-feature">
+          <div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Reliable Service</span>
+        </div>
+        <div class="about-feature">
+          <div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Open Mon-Fri 5pm</span>
+        </div>
+        <div class="about-feature">
+          <div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Located in Johannesburg</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEW SECTION: IN ACTION -->
+<section class="section" id="in-action">
+  <div class="section-header fade-in">
+    <div class="section-label">On Site</div>
+    <h2 class="section-title">Our Team In Action</h2>
+    <p class="section-subtitle">See our skilled workers delivering quality craftsmanship on active construction sites.</p>
+  </div>
+  <div class="action-grid">
+    <!-- Image 1: Engineers/Workers with plans -->
+    <div class="action-card fade-in">
+      <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80" alt="Engineers reviewing plans">
+      <div class="action-overlay">
+        <h4>Precision Planning</h4>
+        <p>Our engineers and site managers review blueprints to ensure every detail meets exact specifications before work begins.</p>
+      </div>
+    </div>
+    <!-- Image 2: Worker with tools/welding -->
+    <div class="action-card fade-in">
+      <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80" alt="Worker welding">
+      <div class="action-overlay">
+        <h4>Expert Craftsmanship</h4>
+        <p>Skilled tradesmen utilizing advanced tools and techniques to deliver structural integrity and fine finishes.</p>
+      </div>
+    </div>
+    <!-- Image 3: Team discussion on site -->
+    <div class="action-card fade-in">
+      <img src="https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?w=800&q=80" alt="Construction team discussion">
+      <div class="action-overlay">
+        <h4>Collaborative Execution</h4>
+        <p>Our team works in sync, communicating effectively to solve challenges and keep projects on schedule.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section" id="gallery">
+  <div class="section-header fade-in">
+    <div class="section-label">Our Work</div>
+    <h2 class="section-title">Project Gallery</h2>
+    <p class="section-subtitle">Browse through our portfolio of completed construction projects.</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item fade-in">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Modern home">
+      <div class="gallery-overlay">
+        <h4>Luxury Residence</h4>
+        <p>Johannesburg</p>
+      </div>
+    </div>
+    <div class="gallery-item fade-in">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Office building">
+      <div class="gallery-overlay">
+        <h4>Corporate Office</h4>
+        <p>Bertrams</p>
+      </div>
+    </div>
+    <div class="gallery-item fade-in">
+      <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Apartment complex">
+      <div class="gallery-overlay">
+        <h4>Apartment Complex</h4>
+        <p>Johannesburg</p>
+      </div>
+    </div>
+    <div class="gallery-item fade-in">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Construction site">
+      <div class="gallery-overlay">
+        <h4>Commercial Development</h4>
+        <p>Johannesburg</p>
+      </div>
+    </div>
+    <div class="gallery-item fade-in">
+      <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80" alt="Interior renovation">
+      <div class="gallery-overlay">
+        <h4>Interior Renovation</h4>
+        <p>Bertrams</p>
+      </div>
+    </div>
+    <div class="gallery-item fade-in">
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80" alt="Industrial project">
+      <div class="gallery-overlay">
+        <h4>Industrial Facility</h4>
+        <p>Johannesburg</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="section-header fade-in">
+    <div class="section-label">Our Portfolio</div>
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-subtitle">Explore our latest construction projects showcasing quality craftsmanship and innovative design.</p>
+  </div>
+  <div class="projects-grid">
+    <div class="project-card fade-in">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Commercial building">
+      <div class="project-overlay">
+        <h3>Skyline Office Tower</h3>
+        <p>Commercial | Johannesburg</p>
+      </div>
+    </div>
+    <div class="project-card fade-in">
+      <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80" alt="Modern villa">
+      <div class="project-overlay">
+        <h3>Horizon Luxury Villas</h3>
+        <p>Residential | Bertrams</p>
+      </div>
+    </div>
+    <div class="project-card fade-in">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Modern home">
+      <div class="project-overlay">
+        <h3>Modern Family Estate</h3>
+        <p>Residential | Johannesburg</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <div class="section-header fade-in">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-subtitle">Find answers to common questions about our services.</p>
+  </div>
+  <div class="faq-container">
+    <div class="faq-item fade-in">
+      <div class="faq-question">
+        <span>How long does a typical construction project take?</span>
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </div>
+      <div class="faq-answer">
+        <p>Project timelines vary based on size and complexity. A typical residential renovation takes 4-8 weeks, while new construction can take 6-12 months. We provide detailed timelines during the initial consultation.</p>
+      </div>
+    </div>
+    <div class="faq-item fade-in">
+      <div class="faq-question">
+        <span>Are you licensed and insured?</span>
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </div>
+      <div class="faq-answer">
+        <p>Yes, Coglan Construction and Projects is fully licensed and insured. We carry comprehensive liability insurance and workers' compensation to protect both our team and our clients.</p>
+      </div>
+    </div>
+    <div class="faq-item fade-in">
+      <div class="faq-question">
+        <span>Do you provide free estimates?</span>
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </div>
+      <div class="faq-answer">
+        <p>Yes, we offer free, no-obligation estimates for all projects. Our team will visit your site, discuss your requirements, and provide a detailed quote within 24-48 hours.</p>
+      </div>
+    </div>
+    <div class="faq-item fade-in">
+      <div class="faq-question">
+        <span>What are your working hours?</span>
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </div>
+      <div class="faq-answer">
+        <p>We are open Monday through Friday and close at 5pm. For emergency services or after-hours consultations, please contact us at 072 286 9783.</p>
+      </div>
+    </div>
+    <div class="faq-item fade-in">
+      <div class="faq-question">
+        <span>Do you handle permits and approvals?</span>
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </div>
+      <div class="faq-answer">
+        <p>Yes, our team handles all necessary permits and regulatory approvals. We work closely with local authorities to ensure your project complies with all building codes and regulations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials-section">
+  <div class="section-header fade-in" style="max-width:1400px;margin:0 auto 4rem;">
+    <div class="section-label">Client Reviews</div>
+    <h2 class="section-title">What Our Clients Say</h2>
+    <p class="section-subtitle">Real feedback from satisfied customers who trusted us with their projects.</p>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card fade-in">
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <p>"This team is professional and always leave your property clean as they found it. Amazing work!"</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">SC</div>
+        <div class="testimonial-info">
+          <h4>SC Training and Consulting</h4>
+          <span>4 years ago · 1 review</span>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-in">
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <p>"Coglan Construction delivered exceptional results on our commercial project. Professional, clean, and amazing quality work throughout."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">JM</div>
+        <div class="testimonial-info">
+          <h4>James Molefe</h4>
+          <span>CEO, TechVentures SA</span>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-in">
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <p>"Professional, reliable, and excellent quality work. Coglan Construction handled our complete renovation flawlessly. Highly recommended!"</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">SN</div>
+        <div class="testimonial-info">
+          <h4>Sarah Nkosi</h4>
+          <span>Homeowner</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="section-header fade-in">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-subtitle">Reach out to us through any of the channels below. We are here to help.</p>
+  </div>
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="contact-card fade-in">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <h4>Phone</h4>
+          <p><a href="tel:0722869783">072 286 9783</a></p>
+        </div>
+      </div>
+      <div class="contact-card fade-in">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <h4>Address</h4>
+          <p>62 Derby Rd, Bertrams, Johannesburg, 2000</p>
+        </div>
+      </div>
+      <div class="contact-card fade-in">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <h4>Working Hours</h4>
+          <p>Mon - Fri: Open · Closes 5pm</p>
+        </div>
+      </div>
+      <div class="contact-card fade-in">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <div>
+          <h4>Plus Code</h4>
+          <p>R359+9Q Johannesburg</p>
+        </div>
+      </div>
+    </div>
+    <div class="map-container fade-in">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.976736654321!2d28.0672!3d-26.1956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0a9e6c7%3A0x6d8c8f8f8f8f8f8f!2s62%20Derby%20Rd%2C%20Bertrams%2C%20Johannesburg%2C%202000!5e0!3m2!1sen!2sza!4v1234567890"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">Coglan<span>Construction</span></div>
+    <p>62 Derby Rd, Bertrams, Johannesburg, 2000 | 072 286 9783</p>
+    <p>Professional construction services. Always leaving your property clean as we found it.</p>
+    <p>© 2024 Coglan Construction and Projects. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="phone-dialer">
+  <a href="tel:0722869783" class="phone-btn" id="phoneBtn" aria-label="Call us">
+    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  </a>
+  <div class="phone-tooltip">Call us: 072 286 9783</div>
+</div>
+
+<!-- Booking Modal -->
+<div class="booking-modal" id="bookingModal">
+  <div class="booking-modal-content">
+    <button class="modal-close" id="modalClose">&times;</button>
+    <h3>Book Your Consultation</h3>
+    <form id="bookingForm">
+      <div class="form-group">
+        <label for="formName">Full Name</label>
+        <input type="text" id="formName" name="name" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="formPhone">Phone Number</label>
+          <input type="tel" id="formPhone" name="phone" placeholder="072 XXX XXXX" required>
+        </div>
+        <div class="form-group">
+          <label for="formEmail">Email Address</label>
+          <input type="email" id="formEmail" name="email" placeholder="your@email.com" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="formService">Service Required</label>
+        <select id="formService" name="service" required>
+          <option value="">Select a service</option>
+          <option value="Residential Construction">Residential Construction</option>
+          <option value="Commercial Projects">Commercial Projects</option>
+          <option value="Renovation & Remodeling">Renovation & Remodeling</option>
+          <option value="Maintenance & Repairs">Maintenance & Repairs</option>
+          <option value="Architectural Design">Architectural Design</option>
+          <option value="Project Management">Project Management</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="formDescription">Project Description</label>
+        <textarea id="formDescription" name="description" placeholder="Describe your project in detail..." required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="formAddress">Service Address</label>
+        <input type="text" id="formAddress" name="address" placeholder="Project location address" required>
+      </div>
+      <button type="submit" class="submit-btn" id="submitBtn">Submit Request</button>
+    </form>
+  </div>
+</div>
+
+<!-- AI Voice Widget with BLUE ROBOT LOGO -->
+<div class="voice-widget" id="voiceWidget">
+  <div class="voice-panel" id="voicePanel">
+    <div class="voice-panel-header">
+      <h3>
+        <!-- Robot Header Logo - Blue -->
+        <svg class="ai-header-logo" viewBox="0 0 100 100">
+          <rect class="robot-head" x="25" y="30" width="50" height="45" rx="10"/>
+          <circle class="robot-eye left" cx="40" cy="50" r="6"/>
+          <circle class="robot-eye right" cx="60" cy="50" r="6"/>
+          <line class="robot-antenna" x1="50" y1="30" x2="50" y2="15"/>
+          <circle class="robot-antenna-light" cx="50" cy="15" r="5"/>
+        </svg>
+        Thandi - AI Assistant
+      </h3>
+      <button class="voice-close-btn" id="voiceClose" aria-label="Close voice panel">&times;</button>
+    </div>
+    <div class="voice-status">
+      <!-- Large Animated Robot Avatar - Blue -->
+      <div class="voice-avatar-container">
+        <div class="voice-avatar" id="voiceAvatar">
+          <svg class="robot-face-svg" viewBox="0 0 100 100">
+            <rect class="robot-head" x="20" y="25" width="60" height="55" rx="12"/>
+            <circle class="robot-eye left" cx="38" cy="48" r="7"/>
+            <circle class="robot-eye right" cx="62" cy="48" r="7"/>
+            <path class="robot-mouth" d="M 35 65 Q 50 72 65 65"/>
+            <line class="robot-antenna" x1="50" y1="25" x2="50" y2="10"/>
+            <circle class="robot-antenna-light" cx="50" cy="10" r="6"/>
+          </svg>
+        </div>
+      </div>
+      <div class="voice-status-text" id="voiceStatus">Tap to start conversation</div>
+      <div class="voice-waves" id="voiceWaves">
+        <div class="voice-wave-bar"></div>
+        <div class="voice-wave-bar"></div>
+        <div class="voice-wave-bar"></div>
+        <div class="voice-wave-bar"></div>
+        <div class="voice-wave-bar"></div>
+        <div class="voice-wave-bar"></div>
+        <div class="voice-wave-bar"></div>
+        <div class="voice-wave-bar"></div>
+        <div class="voice-wave-bar"></div>
+      </div>
+    </div>
+    <div class="voice-transcript">
+      <div class="voice-transcript-label">Transcript</div>
+      <div class="voice-transcript-text" id="voiceTranscript">No conversation yet...</div>
+    </div>
+    <div class="voice-actions">
+      <button class="voice-action-btn" id="voiceStartBtn">
+        <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        Start Talking
+      </button>
+      <button class="voice-action-btn" id="voiceStopBtn">
+        <svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>
+        Stop
+      </button>
+    </div>
+  </div>
+  <!-- Animated Voice Trigger Button with BLUE Robot Logo -->
+  <button class="voice-trigger" id="voiceTrigger" aria-label="Open voice assistant">
+    <svg class="ai-logo-icon" viewBox="0 0 100 100">
+      <rect class="robot-head" x="25" y="30" width="50" height="45" rx="10"/>
+      <circle class="robot-eye left" cx="40" cy="50" r="6"/>
+      <circle class="robot-eye right" cx="60" cy="50" r="6"/>
+      <line class="robot-antenna" x1="50" y1="30" x2="50" y2="15"/>
+      <circle class="robot-antenna-light" cx="50" cy="15" r="5"/>
+    </svg>
+  </button>
+</div>
+
+<div class="confirmation-modal" id="confirmModal">
+  <div class="confirmation-content">
+    <div class="confirmation-icon">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h3>Booking Confirmed!</h3>
+    <p>Perfect. Your request has been submitted. Our team will contact you shortly via phone or email to proceed further.</p>
+    <div class="confirmation-details" id="confirmDetails"></div>
+    <button class="confirmation-btn" id="confirmCloseBtn">Close</button>
+  </div>
+</div>
+
+<div class="toast-container" id="toastContainer"></div>
+
+<script>
+// ============================================
+// STATE MANAGEMENT
+// ============================================
+const thandiState = {
+  conversationStep: 0,
+  isListening: false,
+  isSpeaking: false,
+  isThinking: false,
+  panelOpen: false,
+  userData: {
+    name: '',
+    phone: '',
+    email: '',
+    service: '',
+    description: '',
+    address: ''
+  },
+  collected: {
+    service: false,
+    description: false,
+    name: false,
+    phone: false,
+    email: false,
+    address: false
+  },
+  hasGreeted: false,
+  awaitingConfirmation: false,
+  awaitingCorrection: false,
+  correctionTarget: null,
+  confirmed: false,
+  alreadySent: false,
+  speechRecognition: null,
+  synthesis: window.speechSynthesis,
+  formFields: {
+    name: 'formName',
+    phone: 'formPhone',
+    email: 'formEmail',
+    service: 'formService',
+    description: 'formDescription',
+    address: 'formAddress'
+  },
+  // Learning from interactions
+  learnedPatterns: [],
+  errorHistory: []
+};
+
+// ============================================
+// MAKE.COM WEBHOOK URL
+// ============================================
+const MAKE_WEBHOOK_URL = 'https://hook.eu1.make.com/pfsl0xfi46ap77egyt0alxlysqyjx9ze';
+
+// ============================================
+// DOM References
+// ============================================
+const voiceTrigger = document.getElementById('voiceTrigger');
+const voicePanel = document.getElementById('voicePanel');
+const voiceClose = document.getElementById('voiceClose');
+const voiceStartBtn = document.getElementById('voiceStartBtn');
+const voiceStopBtn = document.getElementById('voiceStopBtn');
+const voiceAvatar = document.getElementById('voiceAvatar');
+const voiceStatus = document.getElementById('voiceStatus');
+const voiceWaves = document.getElementById('voiceWaves');
+const voiceTranscript = document.getElementById('voiceTranscript');
+const bookingForm = document.getElementById('bookingForm');
+const confirmModal = document.getElementById('confirmModal');
+const confirmDetails = document.getElementById('confirmDetails');
+const confirmCloseBtn = document.getElementById('confirmCloseBtn');
+const submitBtn = document.getElementById('submitBtn');
+const toastContainer = document.getElementById('toastContainer');
+const bookingModal = document.getElementById('bookingModal');
+const modalClose = document.getElementById('modalClose');
+const navBookBtn = document.getElementById('navBookBtn');
+const heroBookBtn = document.getElementById('heroBookBtn');
+
+// Scroll Animations
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, observerOptions);
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+// Navbar Scroll
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  navbar.style.boxShadow = window.pageYOffset > 100 ? '0 4px 30px rgba(0,0,0,0.3)' : 'none';
+});
+
+// Mobile Menu
+document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('open'));
+document.getElementById('mobileClose').addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+document.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+});
+
+// Booking Modal
+function openBookingModal() {
+  bookingModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeBookingModal() {
+  bookingModal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+navBookBtn.addEventListener('click', openBookingModal);
+heroBookBtn.addEventListener('click', openBookingModal);
+modalClose.addEventListener('click', closeBookingModal);
+bookingModal.addEventListener('click', (e) => { if (e.target === bookingModal) closeBookingModal(); });
+
+// Voice Panel Toggle
+voiceTrigger.addEventListener('click', () => {
+  thandiState.panelOpen = !thandiState.panelOpen;
+  voicePanel.classList.toggle('open', thandiState.panelOpen);
+  voiceTrigger.classList.toggle('active', thandiState.panelOpen);
+  if (thandiState.panelOpen && !thandiState.hasGreeted) {
+    setTimeout(() => startGreeting(), 500);
+  }
+});
+voiceClose.addEventListener('click', () => {
+  thandiState.panelOpen = false;
+  voicePanel.classList.remove('open');
+  voiceTrigger.classList.remove('active');
+  stopListening();
+  stopSpeaking();
+  stopThinking();
+});
+
+// ============================================
+// SMART SPEECH RECOGNITION WITH ERROR HANDLING
+// ============================================
+function initSpeechRecognition() {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SpeechRecognition) {
+    voiceStatus.textContent = 'Speech recognition not supported';
+    return null;
+  }
+  const recognition = new SpeechRecognition();
+  recognition.continuous = false;
+  recognition.interimResults = true;
+  recognition.lang = 'en-ZA';
+  recognition.maxAlternatives = 3;
+
+  recognition.onstart = () => {
+    if (thandiState.isSpeaking) stopSpeaking();
+    if (thandiState.isThinking) stopThinking();
+    thandiState.isListening = true;
+    voiceStatus.textContent = 'Listening carefully...';
+    voiceAvatar.classList.add('listening');
+    voiceAvatar.classList.remove('speaking', 'thinking');
+    voiceTrigger.classList.add('listening');
+    voiceTrigger.classList.remove('speaking', 'thinking');
+    voiceWaves.classList.add('active');
+    voiceWaves.classList.add('listening');
+    voiceWaves.classList.remove('thinking');
+  };
+
+  recognition.onresult = (event) => {
+    let interimTranscript = '';
+    let finalTranscript = '';
+    for (let i = event.resultIndex; i < event.results.length; i++) {
+      const txt = event.results[i][0].transcript;
+      if (event.results[i].isFinal) finalTranscript += txt;
+      else interimTranscript += txt;
+    }
+    if (interimTranscript) voiceTranscript.textContent = interimTranscript;
+    if (finalTranscript) {
+      voiceTranscript.textContent = finalTranscript;
+      // Start 10-second thinking process
+      startThinking(() => handleUserInput(finalTranscript.trim().toLowerCase()));
+    }
+  };
+
+  recognition.onerror = (event) => {
+    console.error('Speech error:', event.error);
+    if (event.error === 'no-speech') {
+      voiceStatus.textContent = 'I didn\'t hear anything. Please try again.';
+    } else if (event.error === 'not-allowed') {
+      voiceStatus.textContent = 'Microphone access denied. Please allow microphone access.';
+    } else {
+      voiceStatus.textContent = 'I had trouble hearing you. Please try again.';
+    }
+    thandiState.isListening = false;
+    voiceAvatar.classList.remove('listening');
+    voiceTrigger.classList.remove('listening');
+    voiceWaves.classList.remove('active', 'listening');
+  };
+
+  recognition.onend = () => {
+    thandiState.isListening = false;
+    voiceAvatar.classList.remove('listening');
+    voiceTrigger.classList.remove('listening');
+    voiceWaves.classList.remove('active', 'listening');
+  };
+
+  return recognition;
+}
+
+thandiState.speechRecognition = initSpeechRecognition();
+
+function startListening() {
+  if (!thandiState.speechRecognition) {
+    voiceStatus.textContent = 'Speech recognition not available';
+    return;
+  }
+  if (thandiState.isSpeaking) stopSpeaking();
+  if (thandiState.isThinking) stopThinking();
+  try { thandiState.speechRecognition.start(); } catch(e) { console.error(e); }
+}
+
+function stopListening() {
+  if (thandiState.speechRecognition && thandiState.isListening) {
+    thandiState.speechRecognition.stop();
+  }
+  thandiState.isListening = false;
+  voiceAvatar.classList.remove('listening');
+  voiceTrigger.classList.remove('listening');
+  voiceWaves.classList.remove('active', 'listening');
+}
+
+// ============================================
+// 10-SECOND THINKING WITH SMART RESPONSES
+// ============================================
+function startThinking(callback) {
+  thandiState.isThinking = true;
+  voiceStatus.textContent = 'Thandi is thinking...';
+  voiceAvatar.classList.add('thinking');
+  voiceAvatar.classList.remove('listening', 'speaking');
+  voiceTrigger.classList.add('thinking');
+  voiceTrigger.classList.remove('listening', 'speaking');
+  voiceWaves.classList.add('active');
+  voiceWaves.classList.add('thinking');
+  voiceWaves.classList.remove('listening');
+
+  // Show thinking progress
+  const thinkingMessages = [
+    'Analyzing your request...',
+    'Processing information...',
+    'Preparing the best response...',
+    'Almost ready...',
+    'Finalizing response...'
+  ];
+  
+  let messageIndex = 0;
+  const thinkingInterval = setInterval(() => {
+    if (messageIndex < thinkingMessages.length) {
+      voiceStatus.textContent = thinkingMessages[messageIndex];
+      messageIndex++;
+    }
+  }, 2000);
+
+  // 10 seconds thinking time
+  setTimeout(() => {
+    clearInterval(thinkingInterval);
+    stopThinking();
+    if (callback) callback();
+  }, 10000);
+}
+
+function stopThinking() {
+  thandiState.isThinking = false;
+  voiceAvatar.classList.remove('thinking');
+  voiceTrigger.classList.remove('thinking');
+  voiceWaves.classList.remove('thinking');
+}
+
+function speakText(text, callback) {
+  thandiState.synthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'en-ZA';
+  utterance.rate = 0.95;
+  utterance.pitch = 1.0;
+  utterance.volume = 1;
+
+  const voices = thandiState.synthesis.getVoices();
+  const femaleVoice = voices.find(v => v.name.toLowerCase().includes('female') || v.name.toLowerCase().includes('zira') || v.name.toLowerCase().includes('samantha'));
+  if (femaleVoice) utterance.voice = femaleVoice;
+
+  utterance.onstart = () => {
+    thandiState.isSpeaking = true;
+    voiceStatus.textContent = 'Thandi is speaking...';
+    voiceStatus.classList.add('typing');
+    voiceAvatar.classList.add('speaking');
+    voiceAvatar.classList.remove('listening', 'thinking');
+    voiceTrigger.classList.add('speaking');
+    voiceTrigger.classList.remove('listening', 'thinking');
+    voiceTranscript.textContent = text;
+  };
+
+  utterance.onend = () => {
+    thandiState.isSpeaking = false;
+    voiceStatus.textContent = 'Tap to respond';
+    voiceStatus.classList.remove('typing');
+    voiceAvatar.classList.remove('speaking');
+    voiceTrigger.classList.remove('speaking');
+    if (callback) callback();
+  };
+
+  utterance.onerror = () => {
+    thandiState.isSpeaking = false;
+    voiceStatus.textContent = 'Tap to respond';
+    voiceAvatar.classList.remove('speaking');
+    voiceTrigger.classList.remove('speaking');
+  };
+
+  thandiState.synthesis.speak(utterance);
+}
+
+function stopSpeaking() {
+  thandiState.synthesis.cancel();
+  thandiState.isSpeaking = false;
+  voiceAvatar.classList.remove('speaking');
+  voiceTrigger.classList.remove('speaking');
+  voiceStatus.textContent = 'Tap to respond';
+}
+
+// Voice Buttons
+voiceStartBtn.addEventListener('click', () => {
+  if (thandiState.isSpeaking) { stopSpeaking(); setTimeout(() => startListening(), 200); }
+  else if (thandiState.isListening) { stopListening(); }
+  else if (thandiState.isThinking) { stopThinking(); startListening(); }
+  else { if (!thandiState.hasGreeted) startGreeting(); else startListening(); }
+});
+voiceStopBtn.addEventListener('click', () => {
+  stopSpeaking();
+  stopListening();
+  stopThinking();
+  voiceStatus.textContent = 'Tap Start Talking to begin';
+});
+
+// ============================================
+// FORM AUTO-FILL AND VALIDATION
+// ============================================
+function updateFormField(field, value) {
+  const fieldId = thandiState.formFields[field];
+  const element = document.getElementById(fieldId);
+  if (!element) return;
+  
+  if (field === 'service') {
+    const options = Array.from(element.options);
+    const match = options.find(opt => opt.value.toLowerCase().includes(value.toLowerCase()));
+    if (match) {
+      element.value = match.value;
+    } else {
+      element.value = value;
+    }
+  } else {
+    element.value = value;
+  }
+  element.classList.add('filled');
+}
+
+function getFormData() {
+  return {
+    name: document.getElementById('formName').value.trim(),
+    phone: document.getElementById('formPhone').value.trim(),
+    email: document.getElementById('formEmail').value.trim(),
+    service: document.getElementById('formService').value,
+    description: document.getElementById('formDescription').value.trim(),
+    address: document.getElementById('formAddress').value.trim()
+  };
+}
+
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
+function validatePhone(phone) {
+  const re = /^[\+]?[\d\s\-]{7,15}$/;
+  return re.test(phone);
+}
+
+function clearForm() {
+  ['formName', 'formPhone', 'formEmail', 'formService', 'formDescription', 'formAddress'].forEach(id => {
+    document.getElementById(id).value = '';
+    document.getElementById(id).classList.remove('filled');
+  });
+}
+
+// ============================================
+// SMART AI CONVERSATION WITH LEARNING
+// ============================================
+function startGreeting() {
+  thandiState.hasGreeted = true;
+  const greeting = "Hi, I'm Thandi, your intelligent assistant for Coglan Construction and Projects. I help you book construction and repair services quickly and professionally. I'll guide you through a few simple steps, collect the details I need, and send your request to our expert team. Shall we get started?";
+  speakText(greeting, () => setTimeout(() => startListening(), 300));
+}
+
+function handleUserInput(input) {
+  stopListening();
+  
+  // Learn from this interaction
+  thandiState.learnedPatterns.push({
+    input: input,
+    timestamp: new Date().toISOString()
+  });
+  
+  // Navigation commands
+  const navCommands = { 
+    services: '#services', 
+    booking: '#booking', 
+    contact: '#contact', 
+    projects: '#projects', 
+    about: '#about', 
+    home: '#home', 
+    gallery: '#gallery', 
+    faq: '#faq',
+    'in action': '#in-action'
+  };
+  for (const [cmd, selector] of Object.entries(navCommands)) {
+    if (input.includes(cmd)) {
+      document.querySelector(selector).scrollIntoView({ behavior: 'smooth' });
+      speakText(`I'll take you to our ${cmd} section. What else can I help you with?`, () => setTimeout(() => startListening(), 300));
+      return;
+    }
+  }
+
+  const isYes = /yes|yeah|sure|ok|okay|sounds good|that sound|that sounds|go ahead|lets go|let's go|correct|right|confirm|submit|perfect|exactly/.test(input);
+  const isNo = /no|not|nope|nah|don't|wrong|incorrect|change|error|mistake|fix|update/.test(input);
+
+  // ============================================
+  // SMART ERROR HANDLING - ASK WHERE THE ERROR IS
+  // ============================================
+  if (thandiState.awaitingCorrection) {
+    if (/name/.test(input)) { 
+      speakText("I'll update your name. Please tell me the correct name.", () => { 
+        thandiState.correctionTarget = 'name'; 
+        setTimeout(() => startListening(), 300); 
+      }); 
+      return; 
+    }
+    if (/phone|number|mobile|contact/.test(input)) { 
+      speakText("I'll update your phone number. What's the correct number?", () => { 
+        thandiState.correctionTarget = 'phone'; 
+        setTimeout(() => startListening(), 300); 
+      }); 
+      return; 
+    }
+    if (/email|mail/.test(input)) { 
+      speakText("I'll update your email address. What's the correct email?", () => { 
+        thandiState.correctionTarget = 'email'; 
+        setTimeout(() => startListening(), 300); 
+      }); 
+      return; 
+    }
+    if (/service|type|work/.test(input)) { 
+      speakText("I'll update the service type. Which service do you need?", () => { 
+        thandiState.correctionTarget = 'service'; 
+        setTimeout(() => startListening(), 300); 
+      }); 
+      return; 
+    }
+    if (/description|project|details/.test(input)) { 
+      speakText("I'll update the project description. Please describe your project.", () => { 
+        thandiState.correctionTarget = 'description'; 
+        setTimeout(() => startListening(), 300); 
+      }); 
+      return; 
+    }
+    if (/address|location|place/.test(input)) { 
+      speakText("I'll update the address. What's the correct address?", () => { 
+        thandiState.correctionTarget = 'address'; 
+        setTimeout(() => startListening(), 300); 
+      }); 
+      return; 
+    }
+    // If user just says "not" or "error" without specifying, ask which field
+    speakText("I understand there's an error. Please tell me which field needs correction - name, phone, email, service, description, or address.", () => setTimeout(() => startListening(), 300));
+    return;
+  }
+
+  // Update specific field when correction target is set
+  if (thandiState.correctionTarget) {
+    const target = thandiState.correctionTarget;
+    let value = capitalizeFirst(input);
+    if (target === 'phone') value = extractPhone(input) || input;
+    if (target === 'email') value = extractEmail(input) || input;
+    if (target === 'service') value = extractService(input) || capitalizeFirst(input);
+    
+    // Validate before updating
+    if (target === 'email' && !validateEmail(value)) {
+      speakText("That doesn't look like a valid email address. Please provide a correct email address.", () => setTimeout(() => startListening(), 300));
+      return;
+    }
+    if (target === 'phone' && !validatePhone(value)) {
+      speakText("That doesn't look like a valid phone number. Please provide a correct phone number.", () => setTimeout(() => startListening(), 300));
+      return;
+    }
+    
+    thandiState.userData[target] = value;
+    updateFormField(target, value);
+    
+    // Record the error fix for learning
+    thandiState.errorHistory.push({
+      field: target,
+      originalValue: thandiState.userData[target],
+      correctedValue: value,
+      timestamp: new Date().toISOString()
+    });
+    
+    speakText(`Perfect! I've updated your ${target}. Let me confirm all your details again. Name: ${thandiState.userData.name}. Phone: ${thandiState.userData.phone}. Email: ${thandiState.userData.email}. Service: ${thandiState.userData.service}. Address: ${thandiState.userData.address}. Is everything correct now?`, () => {
+      thandiState.awaitingConfirmation = true;
+      thandiState.awaitingCorrection = false;
+      thandiState.correctionTarget = null;
+      setTimeout(() => startListening(), 300);
+    });
+    return;
+  }
+
+  // Confirmation handling with error detection
+  if (thandiState.awaitingConfirmation) {
+    if (isYes) { 
+      submitBooking(); 
+      return; 
+    } else if (isNo) {
+      // User said something is wrong - ask WHERE the error is
+      speakText("I understand. Please tell me which field has the error - name, phone, email, service, description, or address?", () => {
+        thandiState.awaitingConfirmation = false;
+        thandiState.awaitingCorrection = true;
+        setTimeout(() => startListening(), 300);
+      });
+      return;
+    }
+  }
+
+  if (thandiState.conversationStep === 0) {
+    if (isYes) {
+      thandiState.conversationStep = 1;
+      openBookingModal();
+      speakText("Excellent! I've opened the booking form for you. I'll help you fill it out. To start, what type of construction service do you need? For example, residential construction, commercial projects, renovation, maintenance, architectural design, or project management.", () => setTimeout(() => startListening(), 300));
+    } else if (isNo) {
+      speakText("No problem at all. Feel free to explore our website, and I'm here whenever you're ready to book a consultation.", () => {});
+    } else {
+      speakText("I'll take that as a yes! Let me open the booking form and guide you through it.", () => {
+        thandiState.conversationStep = 1;
+        openBookingModal();
+        setTimeout(() => startListening(), 300);
+      });
+    }
+    return;
+  }
+
+  // Collect service with smart suggestions
+  if (!thandiState.collected.service) {
+    thandiState.userData.service = extractService(input) || capitalizeFirst(input);
+    thandiState.collected.service = true;
+    updateFormField('service', thandiState.userData.service);
+    speakText(`Great choice! ${thandiState.userData.service} is one of our specialties. Now, please describe your project in detail. What exactly do you need done?`, () => setTimeout(() => startListening(), 300));
+    return;
+  }
+  
+  // Collect description
+  if (!thandiState.collected.description) {
+    thandiState.userData.description = capitalizeFirst(input);
+    thandiState.collected.description = true;
+    updateFormField('description', thandiState.userData.description);
+    speakText("Thank you for those details. Now, may I have your full name please?", () => setTimeout(() => startListening(), 300));
+    return;
+  }
+  
+  // Collect name
+  if (!thandiState.collected.name) {
+    thandiState.userData.name = capitalizeFirst(input);
+    thandiState.collected.name = true;
+    updateFormField('name', thandiState.userData.name);
+    speakText(`Nice to meet you, ${thandiState.userData.name}. What is your phone number? Please include the area code.`, () => setTimeout(() => startListening(), 300));
+    return;
+  }
+  
+  // Collect phone with validation
+  if (!thandiState.collected.phone) {
+    thandiState.userData.phone = extractPhone(input) || input;
+    if (!validatePhone(thandiState.userData.phone)) {
+      speakText("I want to make sure I have the correct number. Could you please repeat your phone number?", () => setTimeout(() => startListening(), 300));
+      return;
+    }
+    thandiState.collected.phone = true;
+    updateFormField('phone', thandiState.userData.phone);
+    speakText("Perfect. What is your email address?", () => setTimeout(() => startListening(), 300));
+    return;
+  }
+  
+  // Collect email with validation
+  if (!thandiState.collected.email) {
+    thandiState.userData.email = extractEmail(input) || input;
+    if (!validateEmail(thandiState.userData.email)) {
+      speakText("That doesn't look like a valid email address. Could you please provide your correct email address?", () => setTimeout(() => startListening(), 300));
+      return;
+    }
+    thandiState.collected.email = true;
+    updateFormField('email', thandiState.userData.email);
+    speakText("Excellent. Finally, what is the service address where you need the work done?", () => setTimeout(() => startListening(), 300));
+    return;
+  }
+  
+  // Collect address
+  if (!thandiState.collected.address) {
+    thandiState.userData.address = capitalizeFirst(input);
+    thandiState.collected.address = true;
+    updateFormField('address', thandiState.userData.address);
+    triggerConfirmation();
+    return;
+  }
+  
+  speakText("I want to make sure I understand correctly. Could you please repeat that?", () => setTimeout(() => startListening(), 300));
+}
+
+function triggerConfirmation() {
+  thandiState.awaitingConfirmation = true;
+  speakText(`Let me confirm all your details carefully. Name: ${thandiState.userData.name}. Phone: ${thandiState.userData.phone}. Email: ${thandiState.userData.email}. Service: ${thandiState.userData.service}. Project Description: ${thandiState.userData.description}. Service Address: ${thandiState.userData.address}. Is everything correct?`, () => setTimeout(() => startListening(), 300));
+}
+
+function extractService(input) {
+  const services = [
+    { keys: ['residential', 'home', 'house'], value: 'Residential Construction' },
+    { keys: ['commercial', 'office', 'business', 'retail'], value: 'Commercial Projects' },
+    { keys: ['renov', 'remodel', 'upgrade', 'modernize'], value: 'Renovation & Remodeling' },
+    { keys: ['mainten', 'repair', 'fix', 'restore'], value: 'Maintenance & Repairs' },
+    { keys: ['design', 'architect', 'plan', 'blueprint'], value: 'Architectural Design' },
+    { keys: ['project', 'management', 'supervision'], value: 'Project Management' }
+  ];
+  for (const svc of services) {
+    if (svc.keys.some(k => input.includes(k))) return svc.value;
+  }
+  return null;
+}
+
+function extractPhone(input) { 
+  const m = input.match(/[\+]?[\d\s\-]{7,15}/g); 
+  return m ? m[0].trim() : null; 
+}
+
+function extractEmail(input) { 
+  const m = input.match(/[\w.-]+@[\w.-]+\.\w+/g); 
+  return m ? m[0].trim() : null; 
+}
+
+function capitalizeFirst(str) { 
+  return str.replace(/\b\w/g, l => l.toUpperCase()); 
+}
+
+// ============================================
+// SEND ACTUAL FORM DATA TO WEBHOOK
+// ============================================
+async function sendToMake(data) {
+  if (thandiState.alreadySent) {
+    console.log('Lead already sent to Make.com');
+    return false;
+  }
+
+  try {
+    // Ensure we're sending the ACTUAL data values, not labels
+    const payload = {
+      name: data.name || '',
+      phone: data.phone || '',
+      email: data.email || '',
+      service: data.service || '',
+      description: data.description || '',
+      address: data.address || '',
+      date: new Date().toLocaleDateString('en-ZA'),
+      time: new Date().toLocaleTimeString('en-ZA'),
+      datetime: new Date().toISOString()
+    };
+
+    console.log('Sending to Make.com:', payload);
+
+    const response = await fetch(MAKE_WEBHOOK_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    console.log('Lead sent to Make.com successfully');
+    thandiState.alreadySent = true;
+    return true;
+  } catch (error) {
+    console.error('Error sending to Make.com:', error);
+    return false;
+  }
+}
+
+async function submitBooking() {
+  thandiState.awaitingConfirmation = false;
+  thandiState.confirmed = true;
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Submitting...';
+
+  // Get ACTUAL form data from inputs
+  const formData = getFormData();
+  
+  // Also update userData from form
+  thandiState.userData = { ...formData };
+
+  console.log('Submitting booking with data:', formData);
+
+  // Send ACTUAL data to webhook
+  const success = await sendToMake(formData);
+
+  // Save to localStorage as backup
+  const leads = JSON.parse(localStorage.getItem('coglan_leads') || '[]');
+  leads.push({ ...formData, datetime: new Date().toISOString() });
+  localStorage.setItem('coglan_leads', JSON.stringify(leads));
+
+  // Show confirmation with ACTUAL data
+  confirmDetails.innerHTML = `
+    <div class="detail-row"><span class="detail-label">Name</span><span class="detail-value">${formData.name}</span></div>
+    <div class="detail-row"><span class="detail-label">Phone</span><span class="detail-value">${formData.phone}</span></div>
+    <div class="detail-row"><span class="detail-label">Email</span><span class="detail-value">${formData.email}</span></div>
+    <div class="detail-row"><span class="detail-label">Service</span><span class="detail-value">${formData.service}</span></div>
+    <div class="detail-row"><span class="detail-label">Description</span><span class="detail-value">${formData.description}</span></div>
+    <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value">${formData.address}</span></div>
+  `;
+  
+  confirmModal.classList.add('open');
+  closeBookingModal();
+  speakText("Perfect! Your request has been successfully submitted to Coglan Construction. Our expert team will contact you shortly via phone or email to discuss your project further.", () => {});
+  showToast(success ? 'Booking sent successfully!' : 'Booking saved locally.', success ? 'success' : 'error');
+  
+  resetLead();
+  submitBtn.disabled = false;
+  submitBtn.textContent = 'Submit Request';
+}
+
+function resetLead() {
+  thandiState.conversationStep = 0;
+  thandiState.userData = { name: '', phone: '', email: '', service: '', description: '', address: '' };
+  thandiState.collected = { service: false, description: false, name: false, phone: false, email: false, address: false };
+  thandiState.awaitingConfirmation = false;
+  thandiState.awaitingCorrection = false;
+  thandiState.correctionTarget = null;
+  thandiState.confirmed = false;
+  thandiState.hasGreeted = false;
+  thandiState.alreadySent = false;
+  clearForm();
+}
+
+confirmCloseBtn.addEventListener('click', () => confirmModal.classList.remove('open'));
+confirmModal.addEventListener('click', (e) => { if (e.target === confirmModal) confirmModal.classList.remove('open'); });
+
+// Form Submit Handler - Gets ACTUAL values from inputs
+bookingForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  
+  // Get actual form data from inputs
+  const formData = getFormData();
+  
+  // Validate form data
+  if (!validateEmail(formData.email)) {
+    showToast('Please enter a valid email address', 'error');
+    return;
+  }
+  if (!validatePhone(formData.phone)) {
+    showToast('Please enter a valid phone number', 'error');
+    return;
+  }
+  
+  // Update userData with actual values
+  thandiState.userData = { ...formData };
+  thandiState.collected = {
+    service: !!formData.service,
+    description: !!formData.description,
+    name: !!formData.name,
+    phone: !!formData.phone,
+    email: !!formData.email,
+    address: !!formData.address
+  };
+  
+  triggerConfirmation();
+});
+
+// FAQ Toggle
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const active = item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+    if (!active) item.classList.add('active');
+  });
+});
+
+// Toast
+function showToast(message, type = 'success') {
+  const toast = document.createElement('div');
+  toast.className = `toast toast-${type}`;
+  toast.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="${type === 'success' ? '#22c55e' : '#ef4444'}" stroke-width="2">${type === 'success' ? '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>' : '<circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>'}</svg><span class="toast-message">${message}</span>`;
+  toastContainer.appendChild(toast);
+  setTimeout(() => toast.remove(), 5000);
+}
+
+// Voices
+if (thandiState.synthesis) {
+  thandiState.synthesis.onvoiceschanged = () => thandiState.synthesis.getVoices();
+  thandiState.synthesis.getVoices();
+}
+
+// Keyboard Shortcut
+document.addEventListener('keydown', (e) => {
+  if ((e.key === 'v' || e.key === 'V') && !e.ctrlKey && !e.metaKey && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+    if (!thandiState.panelOpen) voiceTrigger.click();
+    else startListening();
+  }
+});
+
+// Active Nav
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.pageYOffset >= s.offsetTop - 100) current = s.getAttribute('id'); });
+  document.querySelectorAll('.nav-links a').forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${current}`));
+});
+</script>
+</body>
+</html>
+
